@@ -14,13 +14,16 @@ class XylophoneApp extends StatelessWidget {
   Expanded buildKey({required Color color, required int soundNumber}) {
     return Expanded(
       child: TextButton(
-        style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(color,
-        ),
         onPressed: () {
           playsound(soundNumber);
         },
         child: Text(''),
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all(
+            color,
+          ),
+          
+        ),
       ),
     );
   }
